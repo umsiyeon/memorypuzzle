@@ -4,10 +4,13 @@ from class_failscore.playerfailscore import *
 
 print("원하는 난이도를 선택하세요 (E:easy, H:hard):")
 mod = input()
-if mod == 'E' or 'e':
+if mod == 'E' or mod == 'e':
     from mod.mod_easy import *
-else:
+elif mod == 'H' or mod == 'h':
     from mod.mod_hard import *
+else:
+    print("옳바르지 않은 입력입니다. 게임을 재실행하십시오")
+    quit()
 
 def main():
     global FPSCLOCK, DISPLAYSURF, BOARDWIDTH, BOARDHEIGHT
@@ -225,7 +228,8 @@ def startGameAnimation(board):
         for y in range(BOARDHEIGHT):
             boxes.append( (x, y) )
     random.shuffle(boxes)
-    boxGroups = splitIntoGroupsOf(8, boxes)
+    boxGroups = splitIntoGroupsOf(6, boxes)
+
 
     drawBoard(board, coveredBoxes)
     for boxGroup in boxGroups:
@@ -238,7 +242,7 @@ def gameWonAnimation(board):
     color1 = LIGHTBGCOLOR
     color2 = BGCOLOR
     BASICFONT = pygame.font.SysFont("malgungothic", 25, bold=True)
-    gameOverSurf = BASICFONT.render(('cliked wrong boxes : ' + str(player.total()) + ' times'), True, WHITE)
+    gameOverSurf = BASICFONT.render(('clicked wrong boxes : ' + str(player.total()) + ' times'), True, WHITE)
     gameOverRect = gameOverSurf.get_rect()
     gameOverRect.center = (WINDOWWIDTH / 2, WINDOWHEIGHT * 5 / 6)
 
