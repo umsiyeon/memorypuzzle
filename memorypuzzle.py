@@ -20,7 +20,7 @@ def main():
 
     mousex = 0 # 마우스 이벤트 발생시 x좌표
     mousey = 0 # 마우스 이벤트 발생시 y좌표
-    pygame.display.set_caption('Memory Puzzle')
+    pygame.display.set_caption('memory puzzle')
 
     mainBoard = getRandomizedBoard() # 게임판의 상태를 나타내는 데이터 구조 반환
     revealedBoxes = generateRevealedBoxesData(False) # 게임판 안의 어떤 상자가 닫혀 있는지 나태내는 데이터 구조 반환(2차원 리스트)
