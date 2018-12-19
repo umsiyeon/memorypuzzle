@@ -10,6 +10,7 @@ elif mod == 'H' or mod == 'h':
     from mod.mod_hard import *
 else:
     print("옳바르지 않은 입력입니다. 게임을 재실행하십시오")
+    pygame.time.wait(3000)
     quit()
 
 def main():
