@@ -1,5 +1,4 @@
 class failcount:
-
     def __init__(self):
         self.result = 0
 
@@ -10,3 +9,8 @@ class failcount:
         return self.result
 
 player = failcount()
+
+
+
+
+
