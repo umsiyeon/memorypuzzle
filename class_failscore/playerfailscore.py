@@ -9,8 +9,3 @@ class failcount:
         return self.result
 
 player = failcount()
-
-
-
-
-

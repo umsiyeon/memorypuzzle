@@ -19,9 +19,8 @@ RED      = (255,   0,   0)
 GREEN    = (  0, 255,   0)
 BLUE     = (  0,   0, 255)
 YELLOW   = (255, 255,   0)
-ORANGE   = (255, 128,   0)
 PURPLE   = (255,   0, 255)
-ALLCOLORS = (RED, GREEN, BLUE, YELLOW, ORANGE, PURPLE)
+ALLCOLORS = (RED, GREEN, BLUE, YELLOW, PURPLE)
 
 # 게임 기본 색상 셋팅
 BGCOLOR = BLACK # 바탕화면색
